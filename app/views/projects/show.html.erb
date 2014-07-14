@@ -1,15 +1,15 @@
 <p>
-  <strong>Project Name:</strong>
+  <strong>Name:</strong>
   <%= @project.name %>
 </p>
 
 <p>
   <strong>Github:</strong>
-  <%= @project.github_url %>
+  <%= link_to @project.github_url, @project.github_url %>
 </p>
 
 <p>
-  <strong>Project Level:</strong>
+  <strong>Level:</strong>
   <%= @project.project_level %>
 </p>
 
@@ -19,12 +19,12 @@
 </p>
 
 <p>
-  <strong>Project Mentor:</strong>
+  <strong>Mentor:</strong>
   <%#<%= @project.intern.mentor.name %>%>
 </p>
 
 <p>
-  <strong>Mentor role:</strong>
+  <strong>Mentor Role:</strong>
   <%= @project.mentor_role %>
 </p>
 
@@ -33,5 +33,6 @@
   <%= @project.description %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Edit', edit_project_path(@project) %>
 <%= link_to 'Back', projects_path %>
+<%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
