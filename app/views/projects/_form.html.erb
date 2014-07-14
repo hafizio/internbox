@@ -12,23 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, 'Project Name' %><br>
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
-    <%= f.label :github_url %><br>
+    <%= f.label :github_url, 'Github' %><br>
     <%= f.text_field :github_url %>
   </div>
+
   <div class="field">
-    <%= f.label :mentor_role %><br>
+    <%= f.label :project_level, 'Project Level' %><br>
+    <%= f.select :project_level,
+        Project::PROJECT_LEVEL,
+        {} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mentor_role, 'Mentor Role' %><br>
     <%= f.select :mentor_role,
         Project::MENTOR_ROLE,
         {} %>
   </div>
+
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

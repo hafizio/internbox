@@ -1,11 +1,26 @@
 <p>
-  <strong>Name:</strong>
+  <strong>Project Name:</strong>
   <%= @project.name %>
 </p>
 
 <p>
-  <strong>Github url:</strong>
+  <strong>Github:</strong>
   <%= @project.github_url %>
+</p>
+
+<p>
+  <strong>Project Level:</strong>
+  <%= @project.project_level %>
+</p>
+
+<p>
+  <strong>Intern:</strong>
+  <%= @project.intern.name %>
+</p>
+
+<p>
+  <strong>Project Mentor:</strong>
+  <%#<%= @project.intern.mentor.name %>%>
 </p>
 
 <p>
@@ -13,14 +28,6 @@
   <%= @project.mentor_role %>
 </p>
 
-<p>
-  <strong>Intern:</strong>
-  <%= @project.intern.email %>
-</p>
-
-<p>
-  <strong>Project Level:</strong>
-  <%#<%= @project.intern.skill_level %>%>
 <p>
   <strong>Description:</strong>
   <%= @project.description %>
