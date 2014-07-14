@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Github url:</strong>
+  <%= @project.github_url %>
+</p>
+
+<p>
+  <strong>Mentor role:</strong>
+  <%= @project.mentor_role %>
+</p>
+
+<p>
+  <strong>Intern:</strong>
+  <%= @project.intern.name %>
+</p>
+
+<p>
+  <strong>Project Level:</strong>
+  <%= @project.intern.skill_level %>
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
