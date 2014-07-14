@@ -1,38 +1,40 @@
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+<div class="large-centered columns panel radius">
+  <p>
+    <strong>Name:</strong>
+    <%= @project.name %>
+  </p>
 
-<p>
-  <strong>Github:</strong>
-  <%= link_to @project.github_url, @project.github_url %>
-</p>
+  <p>
+    <strong>Github:</strong>
+    <%= link_to @project.github_url, @project.github_url %>
+  </p>
 
-<p>
-  <strong>Level:</strong>
-  <%= @project.project_level %>
-</p>
+  <p>
+    <strong>Level:</strong>
+    <%= @project.project_level %>
+  </p>
 
-<p>
-  <strong>Intern:</strong>
-  <%= @project.intern.name %>
-</p>
+  <p>
+    <strong>Intern:</strong>
+    <%= @project.intern.name %>
+  </p>
 
-<p>
-  <strong>Mentor:</strong>
-  <%#<%= @project.intern.mentor.name %>%>
-</p>
+  <p>
+    <strong>Mentor:</strong>
+    
+  </p>
 
-<p>
-  <strong>Mentor Role:</strong>
-  <%= @project.mentor_role %>
-</p>
+  <p>
+    <strong>Mentor Role:</strong>
+    <%= @project.mentor_role %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @project.description %>
+  </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %>
-<%= link_to 'Back', projects_path %>
-<%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_project_path(@project), class: 'button tiny success radius' %>
+  <%= link_to 'Back', projects_path, class: 'button tiny success radius' %>
+  <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button tiny alert radius' %>
+</div>
