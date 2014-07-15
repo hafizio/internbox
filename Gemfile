@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '1.9.3'
 gem 'rails', '4.1.1'
 gem 'mysql2'
 gem 'sass-rails', '~> 4.0.3'
@@ -16,8 +16,8 @@ gem 'foundation-rails'
 group :development do
   gem 'rails_layout'
   gem 'spring'
-  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
-  gem 'pry-byebug'
+  gem 'jazz_hands'
+  gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
