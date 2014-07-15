@@ -21,12 +21,17 @@
 
   <p>
     <strong>Mentor:</strong>
-    
+
   </p>
 
   <p>
     <strong>Mentor Role:</strong>
     <%= @project.mentor_role %>
+  </p>
+
+  <p>
+    <strong>Tags:</strong>
+    <%= raw @project.tags.map { |t| raw link_to t.name, tag_path(t.name) }.join(', ') %>
   </p>
 
   <p>

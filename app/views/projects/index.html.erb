@@ -5,7 +5,7 @@
     <strong>Name</strong>
     <%= project.name %>
   </p>
-  
+
   <p>
     <strong>Github</strong>
     <%= link_to project.github_url, project.github_url %>
@@ -24,6 +24,11 @@
   <p>
     <strong>Level</strong>
     <%= project.project_level %>
+  </p>
+
+  <p>
+    <strong>Tags:</strong>
+    <%= raw project.tags.map { |t| raw link_to t.name, tag_path(t.name) }.join(', ') %>
   </p>
 
   <%= link_to 'Details', project_path(project), class: 'button tiny radius success' %>
