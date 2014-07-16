@@ -22,9 +22,12 @@ group :development do
   gem 'binding_of_caller'
 end
 
+#Heroku deployment
 gem 'rails_12factor', group: :production
+#Replacement for WEBrick
 gem 'unicorn'
 gem 'dotenv-deployment'
+#Serve the Procfile
 gem 'foreman'
 
 group :development, :test do
@@ -32,9 +35,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara'
-  gem 'factory_girl_rails'
-  gem 'selenium-webdriver'
-  gem 'database_cleaner'
-  gem 'email_spec'
+  gem 'capybara', '~> 2.4.1'
+  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'selenium-webdriver', '~> 2.42.0'
+  gem 'database_cleaner', '~> 1.3.0'
+  gem 'email_spec', '~> 1.6.0'
 end
