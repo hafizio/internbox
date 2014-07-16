@@ -17,7 +17,7 @@ group :development do
   gem 'rails_layout'
   gem 'spring'
   gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
-  gem 'pry-byebug' # gem 'pry-debugger' for < Ruby 2.0  
+  gem 'pry-byebug' # gem 'pry-debugger' for < Ruby 2.0
   gem 'better_errors'
   gem 'binding_of_caller'
 end
@@ -26,3 +26,11 @@ gem 'rails_12factor', group: :production
 gem 'unicorn'
 gem 'dotenv-deployment'
 gem 'foreman'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
+
+group :test do
+  gem 'capybara'
+end
