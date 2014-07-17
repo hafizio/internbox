@@ -31,5 +31,5 @@
     <%= raw project.tags.map { |t| raw link_to t.name, tag_path(t.name) }.join(', ') %>
   </p>
 
-  <%= button_to 'Details', project_path(project), class: 'button tiny radius success' %>
+  <%= button_to 'Details', project_path(project), method: :get, class: 'button tiny radius success' %>
 <% end %>
