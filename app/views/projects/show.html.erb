@@ -29,7 +29,7 @@
     <%= @project.mentor_role %>
   </p>
 
-  <p>
+  <p class="tags">
     <strong>Tags:</strong>
     <%= raw @project.tags.map { |t| raw link_to t.name, tag_path(t.name) }.join(', ') %>
   </p>
