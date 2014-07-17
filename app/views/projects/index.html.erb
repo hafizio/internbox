@@ -3,7 +3,7 @@
 <%= div_for @projects, class: 'large-3 columns panel callout radius ' do |project| %>
   <p>
     <strong>Name</strong>
-    <%= project.name %>
+    <%= link_to "#{project.name}", project_path(project) %>
   </p>
 
   <p>
@@ -31,5 +31,5 @@
     <%= raw project.tags.map { |t| raw link_to t.name, tag_path(t.name) }.join(', ') %>
   </p>
 
-  <%= link_to 'Details', project_path(project), class: 'button tiny radius success' %>
+  <%= button_to 'Details', project_path(project), class: 'button tiny radius success' %>
 <% end %>
