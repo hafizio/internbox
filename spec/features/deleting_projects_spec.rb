@@ -10,7 +10,7 @@ feature 'Deleting projects' do
     user.projects.create { project }
   end
 
-  scenario 'Deleting a project' do
+  scenario 'deleting a project' do
     visit '/'
     click_link "#{project.name}"
     click_button 'Destroy'

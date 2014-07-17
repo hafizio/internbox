@@ -7,7 +7,7 @@ feature 'Creating Projects' do
     click_link 'New Project'
   end
 
-  scenario 'can create project' do
+  scenario 'creating a project' do
     fill_in 'Project Name', with: 'Internbox'
     fill_in 'Github', with: 'https://github.com/ibnukamy/internbox'
     select('Intermediate', from: 'Project Level')
