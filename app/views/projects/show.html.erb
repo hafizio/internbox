@@ -39,7 +39,7 @@
     <%= @project.description %>
   </p>
 
-  <%= button_to 'Edit', edit_project_path(@project), method: :get, class: 'button tiny success radius' %>
-  <%= button_to 'Back', projects_path, class: 'button tiny success radius' %>
-  <%= button_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button tiny alert radius' %>
+  <%= link_to 'Edit', edit_project_path(@project), class: 'button tiny success radius' %>
+  <%= link_to 'Back', projects_path, class: 'button tiny success radius' %>
+  <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button tiny alert radius' %>
 </div>

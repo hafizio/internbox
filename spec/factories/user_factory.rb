@@ -9,7 +9,8 @@ FactoryGirl.define do
     name { generate(:name) }
     github_account { generate(:github_account) }
     twitter_account { generate(:twitter_account) }
-    password "example123"
-    password_confirmation "example123"
+    password "example12345"
+    password_confirmation "example12345"
+    mentor_id 1
   end
 end

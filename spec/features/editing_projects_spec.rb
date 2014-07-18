@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 feature 'Editing Projects' do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:admin) { FactoryGirl.create(:admin) }
+  let(:user) { FactoryGirl.create(:user, mentor_id: admin.id) }
   let(:project) { FactoryGirl.create(:project, name: 'Rails 4',
                                                user_id: user.id) }
 
@@ -11,7 +12,7 @@ feature 'Editing Projects' do
 
     visit '/'
     click_link "#{project.name}"
-    click_button 'Edit'
+    click_link 'Edit'
   end
 
   scenario 'updating a project' do

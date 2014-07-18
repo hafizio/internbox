@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 feature 'Creating Projects' do
+  let(:admin) { FactoryGirl.create(:admin) }
+  let(:user) { FactoryGirl.create(:user, mentor_id: admin.id) }
+
   before do
-    sign_in_as!(FactoryGirl.create(:user))
+    sign_in_as!(user)
     visit '/'
     click_link 'New Project'
   end
