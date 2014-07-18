@@ -28,7 +28,7 @@
 
   <div><%= f.label :mentor %><br />
     <%= f.select(:mentor_id,
-        options_from_collection_for_select(Admin.all, :id, :name),
+        options_from_collection_for_select(Admin.where(availability: true), :id, :name),
         { prompt: 'Choose your mentor' }) %>
   </div>
 
