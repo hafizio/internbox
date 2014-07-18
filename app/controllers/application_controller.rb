@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-   devise_parameter_sanitizer.for(:sign_up) << [:github_account, :twitter_account, :mentor_id, :name]
+   devise_parameter_sanitizer.for(:sign_up) << [:github_account, :twitter_account, :mentor_id, :name, :availability]
   end
 end
