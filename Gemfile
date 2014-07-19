@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise', github: 'plataformatec/devise'
 gem 'foundation-rails'
+gem 'figaro'
 
 group :development do
   gem 'rails_layout'
