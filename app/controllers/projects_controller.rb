@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :project_owner!, only: [:edit, :update, :destroy]
+  before_action :admin_or_project_owner!, only: [:edit, :update, :destroy]
 
   def index
     if params[:tag]
@@ -58,7 +58,7 @@ class ProjectsController < ApplicationController
       params.require(:project).permit(:name, :github_url, :mentor_role, :user_id, :description, :project_level, :all_tags)
     end
 
-    def project_owner!
+    def admin_or_project_owner!
       if admin_signed_in?
       else
         @project.user_id != current_user.id
