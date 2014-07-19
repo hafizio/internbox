@@ -5,9 +5,6 @@ feature 'Deleting projects' do
   let(:user) { FactoryGirl.create(:user, mentor_id: admin.id) }
   let(:project) { FactoryGirl.create(:project, name: 'Rails 4',
                                                user_id: user.id) }
-  def current_user
-
-  end
 
   before do
     sign_in_as!(user)

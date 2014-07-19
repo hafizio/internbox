@@ -9,6 +9,7 @@ feature 'Creating Tags' do
   before do
     sign_in_as!(user)
     user.projects.create { project }
+
     visit '/'
     click_link "#{project.name}"
     click_link 'Edit'
