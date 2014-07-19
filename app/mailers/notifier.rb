@@ -9,8 +9,7 @@ class Notifier < ActionMailer::Base
     subject = "[Internbox] New Project: #{@project.name} by #{@user.name}"
 
     mail(to: @mentor.email,
-         subject: subject,
-         reply_to: @user
+         subject: subject
         )
   end
 end
