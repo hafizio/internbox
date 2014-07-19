@@ -61,8 +61,9 @@ class ProjectsController < ApplicationController
 
     def admin_or_project_owner!
       if admin_signed_in?
+      elsif
+        @project.user_id == current_user.id
       else
-        @project.user_id != current_user.id
         redirect_to root_path
         flash[:notice] = 'You do not have enough permission to do this'
       end
