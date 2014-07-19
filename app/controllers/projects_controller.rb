@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :project_owner!, only: [:edit, :update, :destroy]
 
   def index
     if params[:tag]
@@ -55,5 +56,14 @@ class ProjectsController < ApplicationController
 
     def project_params
       params.require(:project).permit(:name, :github_url, :mentor_role, :user_id, :description, :project_level, :all_tags)
+    end
+
+    def project_owner!
+      if admin_signed_in?
+      else
+        @project.user_id != current_user.id
+        redirect_to root_path
+        flash[:notice] = 'You do not have enough permission to do this'
+      end
     end
 end
