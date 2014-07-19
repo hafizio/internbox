@@ -1,0 +1,13 @@
+Hello <%= @mentor.name %>!
+==========================
+
+Your intern (<%= @user.name %>, <%= @user.email %>) has created a new project.
+
+Please help him as a <%= @project.mentor_role %>.
+
+Take notice that this project level is <%= @project.project_level %>.
+
+You can view the project at:
+
+1) <%= project_url(@project) %>
+2) <%= @project.github_url %>
