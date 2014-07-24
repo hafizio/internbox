@@ -65,7 +65,7 @@ class ProjectsController < ApplicationController
         @project.user_id == current_user.id
       else
         redirect_to root_path
-        flash[:notice] = 'You do not have enough permission to do this'
+        flash[:alert] = 'You do not have enough permission to do this'
       end
     end
 end

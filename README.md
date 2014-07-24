@@ -1,7 +1,36 @@
 ###Internbox for Tinkerbox
 
 This application was created as a part of programming interview for Tinkerbox's interns.
+###Developer's Note
 
+This project can be clone at:
+`git clone https://github.com/ibnukamy/internbox.git`
+
+`rake db:migrate`
+
+`rake db:seed`
+
+####Dependencies
+```Ruby
+ruby 2.1.2 
+gem 'rails', '4.1.1'
+gem 'devise', github: 'plataformatec/devise'
+gem 'foundation-rails'
+gem 'figaro'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
+
+#test
+group :test do
+  gem 'capybara', '~> 2.4.1'
+  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'selenium-webdriver', '~> 2.42.0'
+  gem 'database_cleaner', '~> 1.3.0'
+  gem 'email_spec', '~> 1.6.0'
+end
+```
 ###Features
 
 ####Intern
