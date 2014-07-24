@@ -3,7 +3,7 @@
 This application was created as a part of programming interview for Tinkerbox's interns.
 ###Developer's Note
 
-This project can be clone at:
+This project can be cloned at:
 `git clone https://github.com/ibnukamy/internbox.git`
 
 `rake db:migrate`
@@ -11,9 +11,13 @@ This project can be clone at:
 `rake db:seed`
 
 ####Dependencies
+
+Refer the `Gemfile` for the complete reference.
+
 ```Ruby
 ruby 2.1.2 
 gem 'rails', '4.1.1'
+#default gems are omitted
 gem 'devise', github: 'plataformatec/devise'
 gem 'foundation-rails'
 gem 'figaro'
@@ -31,6 +35,7 @@ group :test do
   gem 'email_spec', '~> 1.6.0'
 end
 ```
+
 ###Features
 
 ####Intern
@@ -41,7 +46,7 @@ end
 - Intern cannot edit or delete other interns' projects.
 
 ####Mentor
-- Mentor will receive an email every time interns under their supervision create new project.
+- Mentor will receive an email every time interns under their supervision create a new project.
 - Mentor can supervise more than one intern.
 - Mentor can switch availability.
 - Mentor can edit or delete all projects (Admin).
@@ -52,8 +57,8 @@ end
 - Projects can be sorted by tags.
 - All projects can be viewed at the home page.
 
-###Future Plans
-- Dashboard for Mentor/Admin.
+###TODO
+- Dashboard for Mentor.
 - Pair Programming schedule management for interns.
 
 This is a work in progress.
