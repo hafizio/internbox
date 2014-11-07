@@ -60,5 +60,7 @@ end
 ###TODO
 - Dashboard for Mentor.
 - Pair Programming schedule management for interns.
+- UX flow
+- Complete redesign (Using Bourbon-Neat)
 
 This is a work in progress.
